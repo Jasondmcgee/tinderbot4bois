@@ -9,7 +9,7 @@ class TinderBot:
     def __init__(self, phone):
         self.chrome_options =  webdriver.ChromeOptions()
         self.driver = webdriver.Chrome(
-            executable_path=r"C:\Users\Asus\Desktop\Coding\chromedriver\chromedriver.exe",
+            executable_path=r"chromedriver/chromedriver.exe",
             chrome_options=self.chrome_options)
         self.driver.get("https://tinder.com/")
         sleep(4)
