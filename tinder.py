@@ -22,8 +22,8 @@ class TinderBot:
 
     def type_phone_code(self):
         phone_code = input("type the code in here")
-        sleep(1)
         self.driver.find_element_by_xpath('//*[@aria-describedby="codeVerificationErrorMessage"]/input[1]').send_keys(phone_code)
-        self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div[1]/button[2]').click()
+        sleep(1)
+        self.driver.find_element_by_xpath('//*[contains(text(), "Continue")]').click()
 
 tinder = TinderBot(phone)
